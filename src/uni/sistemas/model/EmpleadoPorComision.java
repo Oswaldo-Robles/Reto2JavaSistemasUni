@@ -8,10 +8,12 @@ public class EmpleadoPorComision extends Empleado {
     public EmpleadoPorComision() {
     }
 
-    public EmpleadoPorComision(double tasaComision, double ventaBruta) {
+    public EmpleadoPorComision(double tasaComision, double ventaBruta, String nombre, String apellido, int numeroSeguroSocial, char sexo) {
+        super(nombre, apellido, numeroSeguroSocial, sexo);
         this.tasaComision = tasaComision;
         this.ventaBruta = ventaBruta;
     }
+
 
     public double getTasaComision() {
         return tasaComision;
