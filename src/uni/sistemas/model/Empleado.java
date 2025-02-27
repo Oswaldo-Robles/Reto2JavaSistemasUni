@@ -1,4 +1,3 @@
-
 package uni.sistemas.model;
 
 /**
@@ -6,8 +5,9 @@ package uni.sistemas.model;
  * @author Oswaldo Robles
  */
 public class Empleado {
+
     private String nombre;
-    private String apellido; 
+    private String apellido;
     private int numeroSeguroSocial;
     private char sexo;
 
@@ -52,7 +52,13 @@ public class Empleado {
     public void setNumeroSeguroSocial(int numeroSeguroSocial) {
         this.numeroSeguroSocial = numeroSeguroSocial;
     }
-    
-   
-    
+
+    public String mostrarDatos() {
+        return "Datos del trabajados: "+
+                "\nNombre: "+this.nombre +
+                "\nApellido: "+this.apellido+
+                "\nNúmero de seguro social: "+this.numeroSeguroSocial+
+                "\nSexo: "+this.sexo;
+    }
+
 }
