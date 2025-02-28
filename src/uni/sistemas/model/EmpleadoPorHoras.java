@@ -3,16 +3,17 @@ package uni.sistemas.model;
 public class EmpleadoPorHoras extends Empleado {
 
     private double pagoHora;
-    private int cantidadHorasTrabajadas;
+    private double cantidadHorasTrabajadas;
 
     public EmpleadoPorHoras() {
     }
 
-    public EmpleadoPorHoras(double pagoHora, int cantidadHorasTrabajadas, String nombre, String apellido, int numeroSeguroSocial, char sexo) {
-        super(nombre, apellido, numeroSeguroSocial, sexo);
+    public EmpleadoPorHoras(double pagoHora, double cantidadHorasTrabajadas, int tipoEmpleado, String nombre, String apellido, int numeroSeguroSocial, char sexo) {
+        super(tipoEmpleado, nombre, apellido, numeroSeguroSocial, sexo);
         this.pagoHora = pagoHora;
         this.cantidadHorasTrabajadas = cantidadHorasTrabajadas;
     }
+
 
     public double getPagoHora() {
         return pagoHora;
@@ -23,7 +24,7 @@ public class EmpleadoPorHoras extends Empleado {
         this.pagoHora = pagoHora;
     }
 
-    public int getCantidadHorasTrabajadas() {
+    public double getCantidadHorasTrabajadas() {
         return cantidadHorasTrabajadas;
     }
 

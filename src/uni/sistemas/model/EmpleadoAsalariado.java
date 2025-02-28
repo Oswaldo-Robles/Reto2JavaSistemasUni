@@ -11,10 +11,11 @@ public class EmpleadoAsalariado extends Empleado {
     public EmpleadoAsalariado() {
     }
 
-    public EmpleadoAsalariado(double pagoSemanal, String nombre, String apellido, int numeroSeguroSocial, char sexo) {
-        super(nombre, apellido, numeroSeguroSocial, sexo);
+    public EmpleadoAsalariado(double pagoSemanal, int tipoEmpleado, String nombre, String apellido, int numeroSeguroSocial, char sexo) {
+        super(tipoEmpleado, nombre, apellido, numeroSeguroSocial, sexo);
         this.pagoSemanal = pagoSemanal;
     }
+
 
     public double getPagoSemanal() {
         return pagoSemanal;

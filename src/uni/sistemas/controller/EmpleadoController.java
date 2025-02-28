@@ -14,13 +14,13 @@ public class EmpleadoController {
         
         switch(tipo){
             case Constante.EMPLEADOASALARIADO:
-                oper = new EmpleadoAsalariado(n1, nombre, apellido, nSeguroSocial, sexo);
+                oper = new EmpleadoAsalariado(n1, tipo, nombre, apellido, nSeguroSocial, sexo);
                 break;
             case Constante.EMPLEADOHORAS:
-                oper = new EmpleadoPorHoras(n1, (int) n2, nombre, apellido, nSeguroSocial, sexo);
+                oper = new EmpleadoPorHoras(n1, (int) n2, tipo, nombre, apellido, nSeguroSocial, sexo);
                 break;
             case Constante.EMPLEADOCOMISION:
-                oper = new EmpleadoPorComision(n1, n2, nombre, apellido, nSeguroSocial, sexo);
+                oper = new EmpleadoPorComision(n1, n2,tipo, nombre, apellido, nSeguroSocial, sexo);
                 break;
         }
         return oper;

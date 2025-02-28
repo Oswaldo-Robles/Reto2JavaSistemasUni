@@ -6,6 +6,7 @@ package uni.sistemas.model;
  */
 public class Empleado {
 
+    private int tipoEmpleado;
     private String nombre;
     private String apellido;
     private int numeroSeguroSocial;
@@ -14,19 +15,20 @@ public class Empleado {
     public Empleado() {
     }
 
-    public Empleado(String nombre, String apellido, int numeroSeguroSocial, char sexo) {
+    public Empleado(int tipoEmpleado, String nombre, String apellido, int numeroSeguroSocial, char sexo) {
+        this.tipoEmpleado = tipoEmpleado;
         this.nombre = nombre;
         this.apellido = apellido;
         this.numeroSeguroSocial = numeroSeguroSocial;
         this.sexo = sexo;
     }
 
-    public char getSexo() {
-        return sexo;
+    public int getTipoEmpleado() {
+        return tipoEmpleado;
     }
 
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
+    public void setTipoEmpleado(int tipoEmpleado) {
+        this.tipoEmpleado = tipoEmpleado;
     }
 
     public String getNombre() {
@@ -53,12 +55,21 @@ public class Empleado {
         this.numeroSeguroSocial = numeroSeguroSocial;
     }
 
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
     public String mostrarDatos() {
-        return "Datos del trabajados: "+
-                "\nNombre: "+this.nombre +
-                "\nApellido: "+this.apellido+
-                "\nNúmero de seguro social: "+this.numeroSeguroSocial+
-                "\nSexo: "+this.sexo;
+        return "Datos del trabajados: "
+                + "\nTipo: " + this.tipoEmpleado
+                + "\nNombre: " + this.nombre
+                + "\nApellido: " + this.apellido
+                + "\nNúmero de seguro social: " + this.numeroSeguroSocial
+                + "\nSexo: " + this.sexo;
     }
 
 }
